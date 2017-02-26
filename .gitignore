@@ -6,3 +6,4 @@
 .elasticbeanstalk/
 /.gitignore
 .idea
+!/templates/index.html

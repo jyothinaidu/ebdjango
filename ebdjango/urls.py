@@ -19,9 +19,9 @@ from scrapping.tasks import web_scrapping_data_from_url
 from django.conf.urls import patterns, include, url
 from accounts.views import *
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
 urlpatterns = [
-    url(r'^$', 'django.contrib.auth.views.login'),
+    #url(r'^$', 'django.contrib.auth.views.login'),
+    url(r'^$', 'ecommerce.views.home_render',name='home_render'),
     url(r'^logout/$', logout_page),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
     url(r'^register/$', register),
@@ -31,5 +31,3 @@ urlpatterns = [
     #url(r'', 'scrapping.tasks.web_scrapping_data_from_url', name='web_scrapping_data_from_url'),
     url(r'^crawling/', 'scrapping.tasks.web_scrapping_data_from_url', name='web_scrapping_data_from_url'),
 ]
-
-urlpatterns += staticfiles_urlpatterns()
