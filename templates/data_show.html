@@ -15,25 +15,14 @@
         $("#btnCreateHtmlTable").click(function () {
             CreateHtmlTable();
         });
-
     });
-
     function CreateHtmlTable() {
         $("#ResultArea").html("");
         var table = $("<table id=DynamicTable border=1></table>").appendTo("#ResultArea");
-
         var rowHeader = $("<tr></tr>").appendTo(table);
-
         $("<td></td>").text("Script CodeID").appendTo(rowHeader);
         $("<td></td>").text("Script Name").appendTo(rowHeader);
-
-
-
-
-
-
     }
-
 </script>
 
 

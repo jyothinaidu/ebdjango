@@ -3,8 +3,8 @@ import os
 from celery import Celery
 from django.conf import settings
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawling.settings')
-app = Celery('crawling')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ebdjango.settings')
+app = Celery('ebdjango')
 app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 

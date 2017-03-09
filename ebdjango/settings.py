@@ -37,8 +37,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'scrapping',
-    'accounts',
+    'registration',
+    'crispy_forms',
+    #'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -121,6 +124,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_DEFAULT_FROM_EMAIL='jyothi.nadu@gmail.com'
+REGISTRATION_AUTO_LOGIN=True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
@@ -131,3 +137,5 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Africa/Nairobi'
+
+CRISPY_TEMPLATE_PACK='bootstrap3'
